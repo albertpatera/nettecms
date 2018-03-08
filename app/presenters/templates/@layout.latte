@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+
+	<title>{ifset title}{include title|striptags} | {/ifset}Nette Web</title>
+
+	<link rel="shortcut icon" href="{$basePath}/favicon.ico">
+	{block head}{/block}
+</head>
+
+<body>
+	<p n:foreach="$flashes as $flash" n:class="flash, $flash->type">{$flash->message}</p>
+	<nav>
+		<ul>
+			<li><a n:href=':Core:Article:'>Úvod</a></li>
+			<li><a href="#">Seznam článků</a></li>
+			<li><a href="#">Kontakt</a></li>
+		</ul>
+	</nav>
+	<head>
+		<h1>{include title}</h1>
+	</head>
+	<section>
+		{include content}
+	</section>
+
+	
+
+	{block scripts}
+	<script src="//nette.github.io/resources/js/netteForms.min.js"></script>
+	{/block}
+</body>
+</html>
