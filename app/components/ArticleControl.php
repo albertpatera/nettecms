@@ -17,9 +17,9 @@ class ArticleControl extends UI\Control
  		$form->addText('username', 'Vaše jméno:')
          ->setType('text')
          ->setRequired();
-     $form->addTextArea('message', 'Text:');
+        $form->addTextArea('message', 'Text:');
          ->setRequired();
-    $form->addSubmit('post', 'Komentovat !');
+        $form->addSubmit('post', 'Komentovat !');
 	 
     return $form;
   }
